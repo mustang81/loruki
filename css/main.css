@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@900&display=swap');
+:root{
+  --primary-color:#047aed;
+  --secondary-color:#1c3fa8;
+  --dark-color:#002240;
+  --light-color:#f4f4f4;
+  --success-color:#5cb85c;
+  --error-color:#d9534f;
+  
+}
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Lato', sans-serif;
+  color:#333;
+  line-height: 1.6;
+}
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+  color:#333;
+}
+h1,h2{
+  font-weight: 300;
+  line-height: 1.2;
+  margin:10px 0;
+}
+p{
+  margin:10px 0;
+}
+img{
+  width:100%;
+}
+
+/* navbar */
+.navbar{
+  background-color: var(--primary-color);
+  color:#fff;
+  height: 70px;
+ 
+}
+.navbar .flex{
+  justify-content: space-between;
+}
+.navbar a{
+  color:#fff;
+  padding:10px;
+  margin:0 5px;
+}
+.navbar a:hover{
+  border-bottom: 2px solid #fff;
+}
+/* Show Case Area */
+.showcase{
+  background-color: var(--primary-color);
+  color:#fff;
+  height: 400px;
+  position:relative;
+}
+.showcase-text{
+  animation: SlideInFromLeft 1s ease-in ;
+}
+.showcase .grid{
+  grid-template-columns: 55% 45%;
+  overflow: visible;
+}
+.showcase-text h1{
+  font-size: 40px;
+
+
+}
+.showcase-text p{
+  margin:20px 0;
+}
+.showcase-form{
+  position: relative;
+  top:60px;
+  height:350px;
+  width:400px;
+  padding:40px;
+  z-index:100;
+  justify-self: right;
+  animation: SlideInFromRight 1s ease-in ;
+
+
+}
+.showcase-form .form-control{
+  margin:30px 0;
+}
+.showcase-form input[type="text"],
+.showcase-form input[type="email"] {
+  border:none;
+  border-bottom:1px solid #b4b3cb;
+  width:100%;
+  padding:3px 0;
+  font-size: 16px;
+
+}
+.showcase-form input:focus{
+  outline: none;
+}
+.showcase::before,
+.showcase::after{
+  content: '';
+  background-color: #fff;
+  height: 100px;
+  position: absolute;
+  bottom:-70px;
+  left:0;
+  right:0;
+  transform: skewy(-3deg);
+}
+/* STats section */
+.stats{
+  padding-top:100px;
+  
+}
+.stats .grid{
+    grid-template-columns: repeat(3,1fr);
+}
+.stats-heading{
+  max-width: 500px;
+  margin: auto;
+}
+.stats .grid h3{
+  font-size: 35px;
+}
+.stats .grid p{
+  font-size: 20px;
+  font-weight: bold;
+}
+/* CLI Section */
+.cli .grid{
+  grid-template-columns: repeat(3,1fr);
+}
+.cli .grid > *:first-child{
+  grid-template-rows: repeat(2,1fr);
+ grid-area: 1/1/3/3;
+}
+/* clud */
+.Cloud .grid{
+  grid-template-columns: 4fr 3fr;
+}
+/* Language sectoin */
+.language .flex{
+  flex-wrap: wrap;
+}
+  .language .card{
+    text-align: center;
+    margin:18px 10px 40px;
+    transition: transform 0.2s ease-in;
+  }
+  .language .card:hover{
+    transform: translateY(-15px);
+  }
+  .language .card h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  /* Features Page  */
+  /* Features head section */
+  .features-head img, .docs-head img{
+    width: 200px;
+    justify-self: flex-end;
+
+  }
+  .features-subhead img{
+    width:300px;
+    justify-self: flex-end;
+  }
+  /* features main */
+  .features-main .card i{
+    margin-right: 20px;
+  }
+  .features-main .grid{
+    padding:30px;
+    grid-template-columns: repeat(3,1fr);
+  }
+  .features-main .grid > *:first-child{
+    /* grid-area: 1/1/2/4; */
+    grid-column: 1/ span 3;
+  }
+  .features-main .grid > *:nth-child(2){
+    /* grid-area: 2/1/3/3; */
+    grid-column: 1/ span 2;
+
+  }
+  /* docs */
+  .docs-main .grid{
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+  }
+  .docs-main h3{
+    margin:20px 0;
+  }
+  .docs-main nav li{
+    font-size: 17px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+  }
+  .docs-main a:hover{
+    font-weight: bold;
+  }
+  .alert i{
+    margin-right: 15px;
+  }
+  /* Footer */
+  .footer .grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer .social a{
+    margin:0 10px;
+  }
+  /* animations */
+  @keyframes SlideInFromLeft {
+    0%{
+      transform: translateX(-100%);
+    }
+    100%{
+      transform: translateX(0);
+    }
+    
+  }
+  @keyframes SlideInFromRight {
+    0%{
+      transform: translateX(100%);
+    }
+    100%{
+      transform: translateX(0);
+    }
+    
+  }
+  @keyframes SlideInFromTop {
+    0%{
+      transform: translateY(-100%);
+    }
+    100%{
+      transform: translateX(0);
+    }
+    
+  }
+  @keyframes SlideInFromBottom {
+    0%{
+      transform: translateY(100%);
+    }
+    100%{
+      transform: translateX(0);
+    }
+    
+  }
