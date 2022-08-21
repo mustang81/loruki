@@ -37,9 +37,10 @@ img{
   width:100%;
 }
 .hidden{
-  visibility:hidden:
-    height:0;
+  visibility: hidden;
+  height: 0;
 }
+
 /* navbar */
 .navbar{
   background-color: var(--primary-color);
